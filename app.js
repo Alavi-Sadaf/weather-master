@@ -6,7 +6,6 @@ submitBtn.addEventListener('click', function () {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputBtn}&appid=${api_key}&units=metric`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       const cityName = data.name;
       const temp = data.main.temp;
       // const tempToCel = temp - 273.15;
